@@ -2,7 +2,7 @@ import random
 
 def main():
     player_hp = 100
-    enemy_hp = 50
+    enemy_hp = 100
 
     print("Welcome to the simple RPG!")
     while player_hp > 0 and enemy_hp > 0:
@@ -17,7 +17,9 @@ def main():
             print(f"You hit the enemy for {damage} HP!")
         elif choice == "2":
             heal = random.randint(5, 15)
+            heal2 = random.randint(5, 15)
             player_hp += heal
+            enemy_hp += heal2
             print(f"You heal yourself for {heal} HP.")
         else:
             print("Invalid choice. Try again.")
